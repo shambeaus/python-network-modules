@@ -1,0 +1,86 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "192.168.1.220",
+            "10.50.0.1"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_filesystems": [
+            "bootflash:"
+        ],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "automateCSR",
+        "ansible_net_image": "bootflash:packages.conf",
+        "ansible_net_interfaces": {
+            "GigabitEthernet1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [
+                    {
+                        "address": "192.168.1.220",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up ",
+                "macaddress": "0cd1.56a3.9500",
+                "mediatype": "Virtual",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CSR vNIC"
+            },
+            "GigabitEthernet2": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [
+                    {
+                        "address": "10.50.0.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up ",
+                "macaddress": "0cd1.56a3.9501",
+                "mediatype": "Virtual",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CSR vNIC"
+            },
+            "GigabitEthernet3": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down ",
+                "macaddress": "0cd1.56a3.9502",
+                "mediatype": "Virtual",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "CSR vNIC"
+            },
+            "GigabitEthernet4": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down ",
+                "macaddress": "0cd1.56a3.9503",
+                "mediatype": "Virtual",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "CSR vNIC"
+            }
+        },
+        "ansible_net_memfree_mb": 880269,
+        "ansible_net_memtotal_mb": 1220576,
+        "ansible_net_model": "CSR1000V",
+        "ansible_net_serialnum": "9TUDBKNFTHH",
+        "ansible_net_version": "16.08.01a"
+    },
+    "changed": false,
+    "failed": false
+}

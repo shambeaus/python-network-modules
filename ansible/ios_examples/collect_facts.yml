@@ -1,0 +1,13 @@
+- hosts: cisco
+  connection: local
+  vars:
+    creds:
+      host: "{{ host }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+  tasks:
+    - name: ssh facts
+      register: iosfacts_out
+      ios_facts:
+        provider: "{{ creds }}"
+    - copy: content="{{ iosfacts_out | to_nice_json }}" dest="output/{{inventory_hostname}}_iosfacts.json"

@@ -1,0 +1,28 @@
+
+- hosts: ciscoasa
+  connection: local
+  vars:
+    creds:
+      host: "{{ host }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      authorize: yes
+      auth_pass: "{{ password }}"
+      transport: cli
+
+- asa_command:
+    commands:
+      - show version
+    provider: "{{ cli }}"
+
+- asa_command:
+    commands:
+      - show asp drop
+      - show memory
+    provider: "{{ cli }}"
+
+- asa_command:
+    commands:
+      - show version
+    provider: "{{ cli }}"
+    context: system
